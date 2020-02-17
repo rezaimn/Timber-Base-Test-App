@@ -3,7 +3,7 @@ import {HttpService} from '../services/http.service';
 import {AlertMessageComponent} from '../components/alert-message/alert-message.component';
 import {CommonModule} from '@angular/common';
 import { HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CdkTableModule} from '@angular/cdk/table';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import {ObserversModule} from '@angular/cdk/observers';
@@ -68,7 +68,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     OverlayModule,
     TranslateModule.forChild(),
     FlexLayoutModule,
-    NgxExtendedPdfViewerModule
+    NgxExtendedPdfViewerModule,
+    ReactiveFormsModule
   ],
   /**
    * Here we can add components, pipes and directives that we want to share.
@@ -110,8 +111,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     OverlayModule,
     TranslateModule,
     FlexLayoutModule,
-    NgxExtendedPdfViewerModule
-
+    NgxExtendedPdfViewerModule,
+    ReactiveFormsModule
   ],
   entryComponents: [],
   /**
