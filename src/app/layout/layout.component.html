@@ -1,0 +1,13 @@
+
+
+<section  class="section-page">
+    <app-alert-message></app-alert-message>
+    <div class="custom-page-container">
+        <router-outlet></router-outlet>
+    </div>
+</section>
+
+
+<div *ngIf="loading === true" class="loader-icon">
+    <img alt="loading..." src="assets/images/loading.gif"/>
+</div>

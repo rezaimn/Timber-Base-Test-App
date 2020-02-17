@@ -1,0 +1,44 @@
+<mat-card class="login-form">
+    <mat-card-content>
+        <img [alt]="'shared.logo-alt'|translate" class="iran-flag" src="assets/images/iran-flag.jpg">
+        <h5 class="login-form-title">{{'auth.login.form-title'|translate}}</h5>
+        <form #formData="ngForm" (ngSubmit)="formData.form.valid && onLogin( )" autocomplete="off"
+              class="login-form-fields"
+              method="post">
+            <mat-form-field appearance="outline">
+                <mat-label>
+                   {{'auth.login.user-name'|translate}}
+                </mat-label>
+                <input
+                       [(ngModel)]="loginForm.username"
+                       matInput
+                       name="username"
+                       [placeholder]="'auth.login.user-name'|translate"
+                       required
+                       type="text"
+                >
+                <mat-error>{{'validation-error-messages.user-name-required'|translate}}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>
+                    {{'auth.login.password'|translate}}
+                </mat-label>
+                <input
+                       [(ngModel)]="loginForm.password"
+                       matInput
+                       name="password"
+                       [placeholder]="'auth.login.password'|translate"
+                       required
+                       type="password"
+                >
+                <mat-error>{{'validation-error-messages.password-required'|translate}}</mat-error>
+            </mat-form-field>
+            <div class="footer-buttons">
+                <span>
+                    <button class=" filled-square-success-btn " mat-raised-button
+                            type="submit">{{'shared.buttons.login'|translate}}</button>
+                </span>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

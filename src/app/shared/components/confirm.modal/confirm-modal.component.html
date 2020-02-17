@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <i (click)="cancel()" class="material-icons">
+                close
+            </i>
+        </div>
+        <div class="card-body">
+            <p class="delete-text">{{deleteText}}</p>
+        </div>
+        <div class="footer-buttons">
+            <span>
+                <button (click)="confirm()" class=" filled-square-success-btn " data-dismiss="modal" mat-raised-button
+                        type="submit">{{'shared.buttons.confirm'|translate}}</button>
+            </span>
+            <span>
+                <button (click)="cancel()" class=" border-square-success-btn " data-dismiss="modal" mat-raised-button
+                        type="button">{{'shared.buttons.cancel'|translate}}</button>
+            </span>
+
+
+        </div>
+    </div>
+</div>

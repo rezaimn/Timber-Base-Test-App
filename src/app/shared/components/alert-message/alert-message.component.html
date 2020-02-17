@@ -1,0 +1,9 @@
+<div *ngIf="display" [ngClass]="{'alert-success':messageObject.type=='success','alert-danger': messageObject.type=='danger'
+     ,'alert-warning': messageObject.type=='warning','alert-info': messageObject.type=='info'}"
+     class="alert">
+    <p class="">{{messageObject.message}}</p>
+</div>
+
+
+
+
