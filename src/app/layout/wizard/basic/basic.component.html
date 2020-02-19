@@ -1,49 +1,179 @@
-<h1>basic info</h1>
 <div class="container">
+<mat-card>
+  <mat-card-title>
+<h1>basic info</h1>
+  </mat-card-title>
+  <mat-card-content>
+
   <div class="row">
-  <p>
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" class="col-4">
       <mat-label>First Name</mat-label>
       <input matInput>
-      <mat-hint>Hint</mat-hint>
+
     </mat-form-field>
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" class="col-4">
       <mat-label>Last Name</mat-label>
       <input matInput>
-      <mat-hint>Hint</mat-hint>
+
     </mat-form-field>
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" class="col-4">
       <mat-label>Resume Title</mat-label>
       <input matInput placeholder="Example:Web Programmer or Marketing Mal">
-      <mat-hint>Hint</mat-hint>
+
     </mat-form-field>
-    </p>
+
     </div>
-
-  <div class="row">
-
-  </div>
-  <mat-form-field appearance="fill">
+<div class="row">
+  <mat-form-field appearance="outline" class="col-2">
     <mat-label>Gender</mat-label>
     <mat-select>
       <mat-option value="option">Male</mat-option>
       <mat-option value="option">Female</mat-option>
     </mat-select>
   </mat-form-field>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline" class="col-2" class="col-2">
     <mat-label>Marital Status</mat-label>
     <mat-select>
       <mat-option value="option">Single</mat-option>
       <mat-option value="option">Married</mat-option>
     </mat-select>
   </mat-form-field>
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="outline" class="col-3">
     <mat-label>Military Service</mat-label>
     <mat-select>
       <mat-option value="option">Single</mat-option>
       <mat-option value="option">Married</mat-option>
     </mat-select>
   </mat-form-field>
+  <mat-form-field appearance="outline" class="col-1">
+    <mat-label>date</mat-label>
+    <mat-select>
+
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="col-2">
+    <mat-label>Month</mat-label>
+    <mat-select>
+
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="col-2">
+    <mat-label>Year</mat-label>
+    <input matInput placeholder="year">
+  </mat-form-field>
 
 </div>
 
+    </mat-card-content>
+</mat-card>
+<mat-card>
+  <mat-card-title>
+<h1>Contact</h1>
+    </mat-card-title>
+  <mat-card-content>
+
+  <div class="row">
+      <mat-form-field appearance="outline" class="col-3">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" >
+        <mat-error ></mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="col-3">
+        <mat-label>Mobile</mat-label>
+        <mat-select>
+          <mat-option [value]="code" *ngFor="let code of constantsService.countryCodeList">
+            {{code.dial_code +' '+ code.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-3">
+        <mat-label>phone</mat-label>
+        <input matInput >
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-3">
+        <mat-label>Website</mat-label>
+        <input matInput placeholder="WWW.">
+      </mat-form-field>
+    </div>
+
+  <div class="row">
+    <mat-form-field appearance="outline" class="col-2">
+      <mat-label>Country</mat-label>
+      <mat-select>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="col-2">
+      <mat-label>State</mat-label>
+      <mat-select  [(ngModel)]="selectedState" (ngModelChange)="setSelected($event)">
+        <mat-option [value]="state.stateName" *ngFor="let state of constantsService.stateCity">
+          {{state.stateName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="col-2">
+      <mat-label>City</mat-label>
+      <mat-select [(ngModel)]="selectedCity">
+        <mat-option [value]="city.name" *ngFor="let city of cityList">
+ {{city.name}}
+        </mat-option>
+
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="col-6">
+      <mat-label>Address</mat-label>
+      <input matInput >
+    </mat-form-field>
+  </div>
+
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>
+<h1>Resume summary</h1>
+    </mat-card-title>
+  <mat-card-content>
+
+  <div class="row">
+    <mat-form-field appearance="outline" class="col-12">
+      <mat-label>Resume summary</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+  </div>
+
+</mat-card-content>
+</mat-card>
+
+
+  <mat-card>
+    <mat-card-title>
+      <h1>Social Network</h1>
+      </mat-card-title>
+    <mat-card-content>
+    <div class="row">
+      <mat-form-field appearance="outline" class="col-3">
+        <mat-label>Social Network</mat-label>
+        <mat-select>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="col-3">
+        <mat-label>Profile ID</mat-label>
+        <input matInput >
+      </mat-form-field>
+
+    </div>
+      </mat-card-content>
+  </mat-card>
+
+
+  <mat-card>
+
+      <p>Add another Social Network record</p>
+
+      <i class="material-icons btn" >add_circle</i>
+
+    </mat-card>
+
+
+</div>

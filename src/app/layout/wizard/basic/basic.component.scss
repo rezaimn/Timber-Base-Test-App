@@ -1,4 +1,14 @@
-.container{
-  height: 200px;
-  background-color: #cccccc;
+mat-card{
+margin-top: 50px;
+  p{
+    text-align: center;
+
+  }
+
+}
+.btn{
+  position: absolute;
+  top: 28px;
+  right: 50%;
+  font-size: 40px;
 }

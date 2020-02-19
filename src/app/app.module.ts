@@ -15,6 +15,7 @@ import {ConfirmModalComponent} from './shared/components/confirm.modal/confirm-m
 import {ViewPdfModalComponent} from './shared/components/view-pdf-modal/view-pdf-modal.component';
 import {CommonModule} from '@angular/common';
 import {SharedModule} from './shared/modules/shared.module';
+import {ConstantsService} from "./shared/services/constants.service";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -46,6 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AlertMessageService,
     EventEmitterService,
     DataService,
+    ConstantsService
   ],
   bootstrap: [AppComponent],
   entryComponents: [
