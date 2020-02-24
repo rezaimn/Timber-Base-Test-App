@@ -1,16 +1,260 @@
-<div style="width: 100%;height: 200px;background: #ee5332; padding: 0">
-   <div style="width: 50%;display:inline-flex">
-     <h1 style="color: #fff;text-transform: uppercase;margin: 80px 30px;font-size: 60px;font-weight: 500">invoice</h1>
-   </div>
-   <div style="width: 50%;display:inline-flex">
-     <div style="width: 50%;display:inline-flex">
-        <p>{{userData.phone}}</p>
-        <p>{{userData.email}}</p>
-        <p>{{userData.website}}</p>
-     </div>
-     <div style="width: 50%;display:inline-flex">
-       <p>{{userData.address}}</p>
+<div>
+  <div id="pdf">
+  <div
+    style="width: 100%;
+  height: 200px;
+  background: #ee5332;
+  padding: 0;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;">
+    <div
+      style="width: 50%;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;">
+      <h1 style="color: #fff;text-transform: uppercase;margin: 80px 30px;font-size: 60px;font-weight: 500">invoice</h1>
+    </div>
+    <div
+      style="width: 50%;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;">
+      <div
+        style=" display: -webkit-box;
+     display: flex;
+     flex-wrap: wrap;">
+        <div
+          style="width: 50%;
+        margin-top: 50px;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;">
+          <p style="width: 100%;color: #fff;font-size: 16px">{{userData.phone}}</p>
+          <p style="width: 100%;color: #fff;font-size: 16px">{{userData.email}}</p>
+          <p style="width: 100%;color: #fff;font-size: 16px">{{userData.website}}</p>
+        </div>
+        <div
+          style="width: 50%;
+          margin-top: 50px;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;">
+          <p style="width: 100%;color: #fff;font-size: 16px">{{userData.address}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-     </div>
-   </div>
+
+  <div
+    style="width: 100%;
+  height: 200px;
+  background: #fff;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px">
+
+    <div
+      style="width: 50%;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;">
+      <div
+        style=" display: -webkit-box;
+        display: flex;
+        flex-wrap: wrap;">
+        <div
+          style="width: 30%;
+        margin-top: 30px;
+        -webkit-box-flex: 0;
+        flex: 0 0 30%;">
+          <p style="width: 100%;color: #999;margin-bottom: 20px;font-size: 16px">Billed To</p>
+          <p style="width: 100%;color: #222;font-size: 14px;font-weight: bold">{{invoice?.client?.address}}</p>
+        </div>
+        <div
+          style="width: 70%;
+          padding-left: 20%;
+               margin-top: 30px;
+        -webkit-box-flex: 0;
+        flex: 0 0 70%;">
+          <p style="width: 100%;color: #999;margin-bottom: 20px;font-size: 16px">Invoice Number</p>
+          <p style="width: 100%;color: #222;font-size: 14px;font-weight: bold">{{invoice?.number}}</p>
+          <p style="width: 100%;color: #999;margin-bottom: 20px;margin-top: 20px;font-size: 16px">Date Of Issue</p>
+          <p style="width: 100%;color: #222;font-size: 14px;font-weight: bold">{{invoice?.date}}</p>
+        </div>
+      </div>
+    </div>
+    <div
+      style="width: 50%;
+      margin-top: 30px;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;">
+      <p style="width: 100%;color: #999;margin-bottom: 20px;text-align: right;font-size: 16px">Invoice Total</p>
+      <h1
+        style="color: #ee5332;text-transform: uppercase;font-size: 45px;font-weight: 500;text-align: right">
+        {{invoice?.total|currency:'USD':'symbol'}}</h1>
+    </div>
+    <hr style="border: 2px solid #ee5332;width: 100%;margin-top: 30px ">
+    <div
+      style="width: 40%;
+    -webkit-box-flex: 0;
+    flex: 0 0 40%;">
+      <p style="width: 100%;font-size: 14px;font-weight: bold;color: #ee5332">Description</p>
+    </div>
+    <div
+      style="width: 20%;
+    -webkit-box-flex: 0;
+    flex: 0 0 20%;">
+      <p style="width: 100%;font-size: 14px;font-weight: bold;color: #ee5332">Unit Cost</p>
+    </div>
+    <div
+      style="width: 20%;
+    -webkit-box-flex: 0;
+    flex: 0 0 20%;">
+      <p style="width: 100%;font-size: 14px;font-weight: bold;color: #ee5332">Qty/Hr Rate</p>
+    </div>
+    <div
+      style="width: 20%;
+    -webkit-box-flex: 0;
+    flex: 0 0 20%;">
+      <p style="width: 100%;font-size: 14px;font-weight: bold;color: #ee5332">Amount</p>
+    </div>
+
+    <div style="width: 100%;
+    -webkit-box-flex: 0;
+    flex: 0 0 100%;">
+      <div style="width: 100%;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;"
+           *ngFor="let item of invoice.items">
+        <div
+          style="width: 40%;
+    -webkit-box-flex: 0;
+    flex: 0 0 40%;">
+          <p style="width: 100%;font-size: 16px;font-weight: bold;color: #222;font-weight: bold">{{item.name}}</p>
+          <p style="width: 100%;font-size: 14px;font-weight: bold;color: #999">{{item.description}}</p>
+        </div>
+        <div
+          style="width: 20%;
+    -webkit-box-flex: 0;
+    flex: 0 0 20%;">
+          <p style="width: 100%;font-size: 16px;font-weight: bold;color: #222;font-weight: bold">{{item.unitCost}}</p>
+          <p style="width: 100%;font-size: 14px;font-weight: bold;color: #999"></p>
+        </div>
+        <div
+          style="width: 20%;
+    -webkit-box-flex: 0;
+    flex: 0 0 20%;">
+          <p style="width: 100%;font-size: 16px;font-weight: bold;color: #222;font-weight: bold">{{item.qtyHrRate}}</p>
+          <p style="width: 100%;font-size: 14px;font-weight: bold;color: #999"></p>
+        </div>
+        <div
+          style="width: 20%;
+    -webkit-box-flex: 0;
+    flex: 0 0 20%;">
+          <p style="width: 100%;font-size: 16px;font-weight: bold;color: #222;font-weight: bold">{{item.amount}}</p>
+          <p style="width: 100%;font-size: 14px;font-weight: bold;color: #999"></p>
+        </div>
+        <hr style="border: 1px solid #ddd;width: 100%;margin-top: 0">
+      </div>
+
+    </div>
+
+
+    <div
+      style="width: 50%;
+        margin-top: 50px;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;">
+    </div>
+    <div
+      style="width: 50%;
+      margin-top: 50px;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;">
+      <div
+        style=" display: -webkit-box;
+        display: flex;
+        flex-wrap: wrap;">
+        <div
+          style="width: 50%;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;">
+          <p style="width: 100%;color: #ee5332;margin-bottom: 20px;font-size: 16px;text-align: right;font-weight: 600">
+            Sub Total</p>
+          <p style="width: 100%;color: #ee5332;margin-bottom: 20px;font-size: 16px;text-align: right;font-weight: 600">
+            Tax</p>
+          <p style="width: 100%;color: #ee5332;margin-bottom: 20px;font-size: 16px;text-align: right;font-weight: 600">
+            Total</p>
+        </div>
+        <div
+          style="width: 50%;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;">
+          <p
+            style="width: 100%;color: #222;font-size: 16px;text-align: right;font-weight: 600;margin-bottom: 20px;">{{(invoice?.total - invoice?.tax)|currency:'USD':'symbol'}}</p>
+          <p
+            style="width: 100%;color: #222;font-size: 16px;text-align: right;font-weight: 600;margin-bottom: 20px;">{{invoice?.tax|currency:'USD':'symbol'}}</p>
+          <p
+            style="width: 100%;color: #222;font-size: 16px;text-align: right;font-weight: 600;margin-bottom: 20px;">{{invoice?.total|currency:'USD':'symbol'}}</p>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div
+      style="width: 50%;
+        margin-top: 50px;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;">
+      <p style="width: 100%;color: #999;margin-bottom: 20px;font-size: 16px">Invoice Terms</p>
+      <p style="width: 100%;color: #222;font-size: 14px;font-weight: bold">Ex. Please pay your invoice by ...</p>
+    </div>
+    <div
+      style="width: 50%;
+      margin-top: 50px;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;">
+      <div
+        style=" display: -webkit-box;
+        display: flex;
+        flex-wrap: wrap;">
+        <div
+          style="width: 50%;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;">
+          <p style="width: 100%;color: #999;margin-bottom: 20px;font-size: 16px"></p>
+          <p style="width: 100%;color: #ee5332;margin-bottom: 20px;font-size: 16px;text-align: right;font-weight: 600">
+            Amount Due (USD)</p>
+        </div>
+        <div
+          style="width: 50%;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;">
+          <p style="width: 100%;color: #999;margin-bottom: 20px;font-size: 16px"></p>
+          <p
+            style="width: 100%;color: #222;font-size: 16px;text-align: right;font-weight: 600;margin-bottom: 20px;">{{(invoice?.total)|currency:'USD':'symbol'}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <div
+      style="width: 50%;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        -webkit-box-flex: 0;
+        flex: 0 0 50%;">
+
+      <button (click)="getPdf()"
+              style="border: none;padding: 10px 20px;margin-right: 20px;color: #fff;background: #ee5332">
+        PDF
+      </button>
+      <button (click)="cancel()" style="border: none;padding: 10px 20px;margin-right: 20px;">Cancel</button>
+
+    </div>
+  </div>
+
 </div>
+
+
+

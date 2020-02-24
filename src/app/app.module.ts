@@ -12,13 +12,15 @@ import {DataService} from './shared/services/data.service';
 import {ConfirmModalComponent} from './shared/components/confirm.modal/confirm-modal.component';
 import {CommonModule} from '@angular/common';
 import {SharedModule} from './shared/modules/shared.module';
+import {ViewInvoicePdfModalComponent} from './layout/invoices/view-invoice-pdf/view-invoice-pdf-modal.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ConfirmModalComponent
+    ConfirmModalComponent,
+    ViewInvoicePdfModalComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import {SharedModule} from './shared/modules/shared.module';
   ],
   bootstrap: [AppComponent],
   entryComponents: [
-    ConfirmModalComponent
+    ConfirmModalComponent,
+    ViewInvoicePdfModalComponent
   ]
 })
 export class AppModule {

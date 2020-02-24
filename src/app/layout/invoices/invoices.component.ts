@@ -80,9 +80,10 @@ export class InvoicesComponent implements OnInit {
   invoiceViewPdf(invoice) {
     const dialogRef = this.dialog.open(ViewInvoicePdfModalComponent, {
       width: '80%',
+      height: '90%',
       panelClass: 'pdf-view-modal',
       data: {
-        invoice: {invoice},
+        invoice: {...invoice},
         userData: this.userData
       }
     });
@@ -92,6 +93,8 @@ export class InvoicesComponent implements OnInit {
       }
     });
   }
+
+
 
   deleteInvoice(index) {
     const dialogRef = this.dialog.open(ConfirmModalComponent, {

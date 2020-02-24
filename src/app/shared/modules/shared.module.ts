@@ -79,6 +79,7 @@ import {SubTotalAndTaxPipe} from '../pipes/sub-total-and-tax.pipe';
    * Here we can add modules, components, pipes and directives that we want to share.
    */
   exports: [
+    CommonModule,
     FormsModule,
     AlertMessageComponent,
     HttpClientModule,

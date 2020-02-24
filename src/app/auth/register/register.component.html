@@ -1,1 +1,89 @@
-<p>register works!</p>
+<mat-card class="register-form">
+  <mat-card-content>
+    <h5 class="login-form-title">Register</h5>
+    <form #formData="ngForm" (ngSubmit)="formData.form.valid && onRegister( )" autocomplete="off"
+          class="login-form-fields"
+          method="post">
+      <mat-form-field appearance="outline">
+        <mat-label>
+          First Name
+        </mat-label>
+        <input
+          [(ngModel)]="registerForm.firstName"
+          matInput
+          name="firstName"
+          placeholder="First Name"
+          required
+          type="text"
+        >
+        <mat-error> First Name is required</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>
+          Last Name
+        </mat-label>
+        <input
+          [(ngModel)]="registerForm.lastName"
+          matInput
+          name="lastName"
+          placeholder="Last Name"
+          required
+          type="text"
+        >
+        <mat-error>Last Name is required</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>
+         Email
+        </mat-label>
+        <input
+          [(ngModel)]="registerForm.email"
+          matInput
+          name="email"
+          placeholder="Email"
+          required
+          type="text"
+        >
+        <mat-error> Email is required</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>
+          Phone
+        </mat-label>
+        <input
+          [(ngModel)]="registerForm.phone"
+          matInput
+          name="phone"
+          placeholder="Phone"
+          required
+          type="text"
+        >
+        <mat-error>Phone is required</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>
+          Website
+        </mat-label>
+        <input
+          [(ngModel)]="registerForm.website"
+          matInput
+          name="site"
+          placeholder="site"
+          required
+          type="text"
+        >
+        <mat-error>Website is required</mat-error>
+      </mat-form-field>
+      <div class="footer-buttons">
+                <span>
+                    <button  mat-raised-button
+                             type="button">cancel</button>
+                </span>
+        <span>
+                    <button   mat-raised-button color="primary"
+                              type="submit" >Register</button>
+                </span>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

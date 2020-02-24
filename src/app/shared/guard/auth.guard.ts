@@ -4,7 +4,7 @@ import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from '
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  token = localStorage.getItem('token');
+  token = localStorage.getItem('timber-token');
 
   constructor(private router: Router) {
   }
