@@ -1,0 +1,123 @@
+<div class="manage-invoice">
+  <mat-card-header>
+    <mat-card-title>
+      {{data.invoice.number ? 'Update' : 'Add New'}} Invoice
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card>
+    <div class="container"
+         fxLayout
+         fxLayout.xs="column"
+         fxLayoutAlign="start"
+         fxLayoutGap="10px"
+         fxLayoutGap.xs="0">
+      <div fxFlex="50%">
+        <mat-form-field appearance="outline">
+          <mat-label>Client Name</mat-label>
+          <input type="text" matInput name="client-name" [(ngModel)]="invoice.client.name" [matAutocomplete]="auto"
+                 (ngModelChange)="clientSearchChange($event)" (focus)="clientSearchChange(invoice.client.name)">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let client of filteredClients" [value]="client.name">
+              {{client.name}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="container client-info"
+         fxLayout
+         fxLayout.xs="column"
+         fxLayoutAlign="start"
+         fxLayoutGap="10px"
+         fxLayoutGap.xs="0">
+      <div fxFlex="33%">
+        <mat-label><strong>Email: </strong>{{invoice.client.email}}</mat-label>
+      </div>
+      <div fxFlex="33%">
+        <mat-label><strong>Phone: </strong>{{invoice.client.phone}}</mat-label>
+      </div>
+      <div fxFlex="33%">
+        <mat-label><strong>Address: </strong>{{invoice.client.address}}</mat-label>
+      </div>
+    </div>
+  </mat-card>
+
+
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Invoice Items</mat-card-title>
+      <i class="material-icons pointer green-text add-icon" (click)="addNewItem()">
+        add_circle_outline
+      </i>
+    </mat-card-header>
+
+    <div *ngFor="let item of invoice.items;let i=index"
+         class="container item-row"
+         fxLayout
+         fxLayout.xs="column"
+         fxLayoutAlign="start"
+         fxLayoutGap="10px"
+         fxLayoutGap.xs="0">
+      <div fxFlex="20%">
+        <mat-form-field appearance="outline">
+          <mat-label>Item Name</mat-label>
+          <input type="text" matInput name="item-name" [(ngModel)]="item.name" [matAutocomplete]="auto" (focus)="itemSearchChange('',i)"
+                 (ngModelChange)="itemSearchChange($event,i)">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let itemT of filteredItems" [value]="itemT.name">
+              {{itemT.name}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </div>
+      <div fxFlex="10%">
+        <mat-form-field appearance="outline">
+          <mat-label>Qty/Hr Rate</mat-label>
+          <input type="text" matInput name="item-gty" [(ngModel)]="item.qtyHrRate" (ngModelChange)="setItemQty($event,i)">
+        </mat-form-field>
+      </div>
+      <div fxFlex="40%" class="data-label">
+        <mat-label><strong>Description: </strong>{{item.description}}</mat-label>
+      </div>
+      <div fxFlex="10%" class="data-label">
+        <mat-label><strong>Unit Cost: </strong>{{item.unitCost}}</mat-label>
+      </div>
+      <div fxFlex="10%" class="data-label">
+        <mat-label><strong>Amount: </strong>{{item.amount}}</mat-label>
+      </div>
+      <div fxFlex="10%" class="data-label">
+        <i class="material-icons pointer red-text option-item" (click)="deleteItem(i)">
+          delete_outline
+        </i>
+      </div>
+    </div>
+
+    <div
+         class="container item-row"
+         fxLayout
+         fxLayout.xs="column"
+         fxLayoutAlign="start"
+         fxLayoutGap="10px"
+         fxLayoutGap.xs="0">
+
+        <div fxFlex="33%" class="data-label">
+          <mat-label><strong>Sub Total: </strong>{{(invoice.items|subTotalAndTax:'subTotal')| currency:'USD':'symbol'}}</mat-label>
+        </div>
+        <div fxFlex="33%" class="data-label">
+          <mat-label><strong>Tax: </strong>{{(invoice.items|subTotalAndTax:'tax')| currency:'USD':'symbol'}}</mat-label>
+        </div>
+        <div fxFlex="33%" class="data-label">
+          <mat-label><strong>Total: </strong>{{((invoice.items|subTotalAndTax:'subTotal')+(invoice.items|subTotalAndTax:'tax'))| currency:'USD':'symbol'}}</mat-label>
+        </div>
+
+    </div>
+  </mat-card>
+  <div class="footer-buttons">
+    <span>
+      <button mat-raised-button type="submit" color="primary" (click)="saveInvoice()">Save</button>
+    </span>
+    <span>
+      <button mat-raised-button color="warn" type="button" (click)="cancelInvoice()">Cancel</button>
+    </span>
+  </div>
+</div>

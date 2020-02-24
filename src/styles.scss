@@ -1,8 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "assets/styles/colors";
+body{
+  margin: 0;
+}
+mat-form-field{
+  width: 100%;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.row{
-  margin: 0;
+.pointer{
+  cursor: pointer;
+}
+
+.page-content{
+  padding: 40px;
+}
+
+.red-text{
+  color: $red;
+}
+
+.blue-text{
+  color: $blue;
+}
+
+.orange-text{
+  color:$orange;
+}
+
+.green-text{
+  color:$green;
+}
+
+
+.add-icon{
+  position: absolute;
+  right: 30px;
+  font-size: 38px;
+}
+.footer-buttons {
+  button {
+    margin-right: 20px;
+  }
+}
+
+.pdf-view-modal{
+  mat-dialog-container{
+    padding: 0!important;
+  }
 }

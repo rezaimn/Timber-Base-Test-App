@@ -30,6 +30,7 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { MatNativeDateModule} from '@angular/material/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {SubTotalAndTaxPipe} from '../pipes/sub-total-and-tax.pipe';
 
 @NgModule({
   /**
@@ -72,6 +73,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
    */
   declarations: [
     AlertMessageComponent,
+    SubTotalAndTaxPipe,
   ],
   /**
    * Here we can add modules, components, pipes and directives that we want to share.
@@ -106,7 +108,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     ObserversModule,
     OverlayModule,
     FlexLayoutModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SubTotalAndTaxPipe
   ],
   entryComponents: [],
   /**
@@ -114,6 +117,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
    */
   providers: [
     HttpService,
+    SubTotalAndTaxPipe
   ]
 })
 

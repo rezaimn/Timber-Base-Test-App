@@ -1,0 +1,26 @@
+<mat-nav-list>
+  <mat-list-item [ngClass]="{'active':selectedItem==='/invoices'}" (click)="setSelectedItem('/invoices')" >
+    <a matLine  >Invoices</a>
+    <button mat-icon-button  >
+      <i class="material-icons">
+        list_alt
+      </i>
+    </button>
+  </mat-list-item>
+  <mat-list-item [ngClass]="{'active':selectedItem==='/clients'}" (click)="setSelectedItem('/clients')" >
+    <a matLine  >Clients</a>
+    <button mat-icon-button  >
+      <i class="material-icons">
+        people
+      </i>
+    </button>
+  </mat-list-item>
+  <mat-list-item  [ngClass]="{'active':selectedItem==='/items'}" (click)="setSelectedItem('/items')"  >
+    <a matLine >Items</a>
+    <button mat-icon-button  >
+      <i class="material-icons">
+        shopping_basket
+      </i>
+    </button>
+  </mat-list-item>
+</mat-nav-list>

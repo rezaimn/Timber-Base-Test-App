@@ -6,23 +6,24 @@ import {LayoutComponent} from './layout.component';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {LayoutHttpInterceptor} from '../shared/interceptor/layout-http.interceptor';
 import {SharedModule} from '../shared/modules/shared.module';
-
+import {SidebarComponent} from '../../app/layout/sidebar/sidebar.component';
 
 
 @NgModule({
-    imports: [
-        CommonModule,
-        LayoutRoutingModule,
-        SharedModule,
+  imports: [
+    CommonModule,
+    LayoutRoutingModule,
+    SharedModule,
 
-    ],
-    declarations: [
-        LayoutComponent,
-    ],
-    providers: [
-        {provide: HTTP_INTERCEPTORS, useClass: LayoutHttpInterceptor, multi: true}
-    ],
-    entryComponents: []
+  ],
+  declarations: [
+    LayoutComponent,
+    SidebarComponent,
+  ],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: LayoutHttpInterceptor, multi: true}
+  ],
+  entryComponents: []
 })
 export class LayoutModule {
 }

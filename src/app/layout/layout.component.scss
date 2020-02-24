@@ -1,52 +1,49 @@
 * {
-    -webkit-transition: margin-left 0.2s ease-in-out;
-    -moz-transition: margin-left 0.2s ease-in-out;
-    -ms-transition: margin-left 0.2s ease-in-out;
-    -o-transition: margin-left 0.2s ease-in-out;
-    transition: margin-left 0.2s ease-in-out;
+  -webkit-transition: margin-left 0.2s ease-in-out;
+  -moz-transition: margin-left 0.2s ease-in-out;
+  -ms-transition: margin-left 0.2s ease-in-out;
+  -o-transition: margin-left 0.2s ease-in-out;
+  transition: margin-left 0.2s ease-in-out;
 }
 
+mat-drawer-container {
+  height: 100%;
+}
+
+mat-drawer {
+  width: 256px;
+  box-shadow: 0 -3px 30px -34px rgba(0, 0, 0, .56), 0 4px 9px 0 rgba(0, 0, 0, .12), 0 8px 11px -11px rgba(0, 0, 0, .2);
+}
+
+mat-toolbar {
+  background: #ffffff;
+}
+
+.sidenav {
+  padding-top: 60px;
+}
+
+
+
 .main-container {
-    padding: 15px;
-    -ms-overflow-x: hidden;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: relative;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
 }
 
 .section-page {
-    margin-top: 90px;
+  height: 100vh !important;
 }
 
-.collapsed {
-    margin-left: 60px;
-}
-
-@media screen and (max-width: 992px) {
-    .main-container {
-        margin-left: 0px !important;
-    }
-}
-
-@media print {
-    .main-container {
-        margin-top: 0px !important;
-        margin-left: 0px !important;
-    }
-}
 
 .loader-icon {
-    position: fixed;
-    top: 43%;
-    left: calc(50% - 40px);
+  position: fixed;
+  top: 43%;
+  left: calc(50% - 40px);
 
-    img {
-        height: 80px;
-        width: 80px;
-    }
-}
-
-.custom-page-container {
-    width: calc(100% - 340px);
-    margin: 0 auto;
+  img {
+    height: 80px;
+    width: 80px;
+  }
 }

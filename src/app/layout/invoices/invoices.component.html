@@ -1,0 +1,56 @@
+<div class="page-content">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Invoice List</mat-card-title>
+      <i class="material-icons pointer green-text add-icon" (click)="openInvoiceAddUpdateModal(null,0)">
+        add_circle_outline
+      </i>
+    </mat-card-header>
+
+
+    <mat-card-content>
+      <mat-table [dataSource]="invoiceList">
+        <!-- Number Definition -->
+        <ng-container matColumnDef="number">
+          <mat-header-cell *matHeaderCellDef> Number</mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.number}} </mat-cell>
+        </ng-container>
+
+        <!-- Date Definition-->
+        <ng-container matColumnDef="date">
+          <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.date|date:'MM/dd/yyyy'}} </mat-cell>
+        </ng-container>
+
+        <!-- Definition Phone -->
+        <ng-container matColumnDef="client">
+          <mat-header-cell *matHeaderCellDef> Client </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.client.name}} </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="total">
+          <mat-header-cell *matHeaderCellDef> Total </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.total|currency:'USD':'symbol'}} </mat-cell>
+        </ng-container>
+        <!-- Definition Address -->
+        <ng-container  matColumnDef="options" >
+          <mat-header-cell *matHeaderCellDef> Option </mat-header-cell>
+          <mat-cell *matCellDef="let row;let i = index">
+            <i class="material-icons pointer blue-text option-item" (click)="openInvoiceAddUpdateModal(row,i)" >
+              edit
+            </i>
+            <i class="material-icons pointer green-text option-item" (click)="invoiceViewPdf(row)">
+              visibility
+            </i>
+            <i class="material-icons pointer red-text option-item" (click)="deleteInvoice(i)">
+              delete_outline
+            </i>
+          </mat-cell>
+        </ng-container>
+
+        <!-- Header and Row Declarations -->
+        <mat-header-row *matHeaderRowDef="['number', 'date', 'client','total' ,'options']"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: ['number', 'date', 'client', 'total','options' ]"></mat-row>
+      </mat-table>
+    </mat-card-content>
+  </mat-card>
+</div>

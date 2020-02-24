@@ -1,13 +1,30 @@
+<section class="section-page">
+  <app-alert-message></app-alert-message>
 
+  <mat-drawer-container class="main-container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="side" opened>
+      <app-sidebar></app-sidebar>
+    </mat-drawer>
 
-<section  class="section-page">
-    <app-alert-message></app-alert-message>
-    <div class="custom-page-container">
-        <router-outlet></router-outlet>
+    <div class="sidenav-content">
+      <mat-toolbar>
+        <mat-toolbar-row>
+              <span>
+                <i class="material-icons pointer" (click)="drawer.toggle()">
+                    dehaze
+                </i>
+              </span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+
+      <router-outlet></router-outlet>
     </div>
+
+  </mat-drawer-container>
+
 </section>
 
 
 <div *ngIf="loading === true" class="loader-icon">
-    <img alt="loading..." src="assets/images/loading.gif"/>
+  <img alt="loading..." src="assets/images/loading.gif"/>
 </div>

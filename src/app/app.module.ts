@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 import {AuthGuard} from './shared/guard/auth.guard';
 import {AlertMessageService} from './shared/services/alert-message.service';
 import {EventEmitterService} from './shared/services/event-emitter.service';

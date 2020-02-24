@@ -8,7 +8,10 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      {path: '', redirectTo: 'wizard', pathMatch: 'prefix'},
+      {path: '', redirectTo: 'invoices', pathMatch: 'prefix'},
+      {path: 'invoices', loadChildren: () => import('./invoices/invoices.module').then(m => m.InvoicesModule) },
+      {path: 'clients', loadChildren: () => import('./clients/clients.module').then(m => m.ClientsModule) },
+      {path: 'items', loadChildren: () => import('./items/items.module').then(m => m.ItemsModule) }
     ]
   }
 ];

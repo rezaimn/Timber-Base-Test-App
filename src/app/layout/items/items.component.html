@@ -1,0 +1,33 @@
+
+<div class="page-content">
+  <mat-card>
+    <mat-card-title>Items List</mat-card-title>
+    <mat-card-content>
+      <mat-table [dataSource]="itemsList">
+        <!--  Item Name Definition -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Item Name </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Description Definition -->
+        <ng-container matColumnDef="description">
+          <mat-header-cell *matHeaderCellDef> Description </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.description}} </mat-cell>
+        </ng-container>
+
+        <!-- Unit Cost Definition -->
+        <ng-container matColumnDef="unitCost">
+          <mat-header-cell *matHeaderCellDef> Unit Cost </mat-header-cell>
+          <mat-cell *matCellDef="let row"> {{row.unitCost}} </mat-cell>
+        </ng-container>
+
+        <!-- Header and Row Declarations -->
+        <mat-header-row *matHeaderRowDef="['name', 'description', 'unitCost']"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: ['name', 'description', 'unitCost']"></mat-row>
+      </mat-table>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+

@@ -1,0 +1,15 @@
+
+@import "~src/styles";
+
+
+mat-list-item {
+  transition: ease-in-out .3s;
+  &:hover {
+    background: $orange!important;
+    color: $white;
+  }
+  &.active {
+    background: $orange!important;
+    color: $white;
+  }
+}
