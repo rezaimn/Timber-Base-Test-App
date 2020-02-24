@@ -4,7 +4,7 @@ import {AuthRoutingModule} from './auth-routing.module';
 import {AuthComponent} from './auth.component';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AuthInterceptor} from '../shared/interceptor/auth.interceptor';
-import {TranslateModule} from '@ngx-translate/core';
+
 
 @NgModule({
     imports: [

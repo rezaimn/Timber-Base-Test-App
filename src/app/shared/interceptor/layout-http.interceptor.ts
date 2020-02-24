@@ -7,8 +7,6 @@ import {catchError, map} from 'rxjs/operators';
 import {AlertMessageService} from '../services/alert-message.service';
 import {Router} from '@angular/router';
 import {DataService} from '../services/data.service';
-import {TranslateService} from '@ngx-translate/core';
-import {environment} from '../../../environments/environment';
 
 @Injectable()
 export class LayoutHttpInterceptor implements HttpInterceptor {
@@ -16,13 +14,12 @@ export class LayoutHttpInterceptor implements HttpInterceptor {
 
   constructor(public alertMessageService: AlertMessageService,
               private dataService: DataService,
-              private translate: TranslateService,
               private router: Router) {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    this.token = localStorage.getItem('token');
-    request = request.clone({headers: request.headers.set('X-Auth-Token', this.token)});
+    // this.token = localStorage.getItem('token');
+    // request = request.clone({headers: request.headers.set('X-Auth-Token', this.token)});
     request = request.clone({headers: request.headers.set('Content-Type', 'application/json')});
     request = request.clone({headers: request.headers.set('Accept', 'application/json')});
     return next.handle(request).pipe(
@@ -48,11 +45,6 @@ export class LayoutHttpInterceptor implements HttpInterceptor {
         } else if (error.status === 406) {
           this.alertMessageService.fail(error.status, error.error.error.data);
         } else {
-          this.translate.get('shared.messages.server-error').subscribe(
-            (result => {
-              message = result;
-            })
-          );
           this.alertMessageService.fail(error.status, message);
         }
 

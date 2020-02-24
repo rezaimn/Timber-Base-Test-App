@@ -8,9 +8,7 @@ import {CdkTableModule} from '@angular/cdk/table';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
 import {ObserversModule} from '@angular/cdk/observers';
 import {OverlayModule} from '@angular/cdk/overlay';
-import {TranslateModule} from '@ngx-translate/core';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {NgxExtendedPdfViewerModule} from 'ngx-extended-pdf-viewer';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatButtonModule} from '@angular/material/button';
@@ -66,9 +64,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     CdkAccordionModule,
     ObserversModule,
     OverlayModule,
-    TranslateModule.forChild(),
     FlexLayoutModule,
-    NgxExtendedPdfViewerModule,
     ReactiveFormsModule
   ],
   /**
@@ -109,9 +105,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     CdkAccordionModule,
     ObserversModule,
     OverlayModule,
-    TranslateModule,
     FlexLayoutModule,
-    NgxExtendedPdfViewerModule,
     ReactiveFormsModule
   ],
   entryComponents: [],

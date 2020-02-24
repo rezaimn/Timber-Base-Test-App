@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "sample item 1",
+    "description": "sample item 1 description",
+    "unitCost": 1000
+  },
+  {
+    "id": 2,
+    "name": "sample item 2",
+    "description": "sample item 2 description",
+    "unitCost": 500
+  },
+  {
+    "id": 3,
+    "name": "sample item 3",
+    "description": "sample item 3 description",
+    "unitCost": 1300
+  },
+  {
+    "id": 4,
+    "name": "sample item 4",
+    "description": "sample item 4 description",
+    "unitCost": 800
+  },
+  {
+    "id": 5,
+    "name": "sample item 5",
+    "description": "sample item 5 description",
+    "unitCost": 340
+  },
+  {
+    "id": 6,
+    "name": "sample item 6",
+    "description": "sample item 6 description",
+    "unitCost": 3049
+  },
+  {
+    "id": 7,
+    "name": "sample item 7",
+    "description": "sample item 7 description",
+    "unitCost": 2300
+  },
+  {
+    "id": 8,
+    "name": "sample item 8",
+    "description": "sample item 8 description",
+    "unitCost": 1000
+  },
+  {
+    "id": 9,
+    "name": "sample item 9",
+    "description": "sample item 9 description",
+    "unitCost": 900
+  },
+  {
+    "id": 10,
+    "name": "sample item 10",
+    "description": "sample item 10 description",
+    "unitCost": 400
+  }
+]

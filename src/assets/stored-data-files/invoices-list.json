@@ -1,0 +1,154 @@
+[
+  {
+    "id":1,
+    "number":"000001",
+    "date":"12/02/2020",
+    "items":[
+      {
+        "id": 8,
+        "name": "sample item 8",
+        "description": "sample item 8 description",
+        "unitCost": 1000,
+        "qtyHrRate": 1,
+        "amount": 1000
+      },
+      {
+        "id": 9,
+        "name": "sample item 9",
+        "description": "sample item 9 description",
+        "unitCost": 900,
+        "qtyHrRate": 1,
+        "amount": 900
+      },
+      {
+        "id": 10,
+        "name": "sample item 10",
+        "description": "sample item 10 description",
+        "unitCost": 400,
+        "qtyHrRate": 1,
+        "amount": 400
+      }
+    ],
+  "client":  {
+    "id": 1,
+    "name": "Lott Goff",
+    "email": "lottgoff@musix.com",
+    "phone": "+1 (924) 563-2971",
+    "address": "496 Thatford Avenue, Bergoo, Northern Mariana Islands, 7084"
+  },
+  "total":2500,
+  "tax":200
+  },
+  {
+    "id":2,
+    "number":"000002",
+    "date":"11/04/2020",
+    "items":[
+      {
+        "id": 1,
+        "name": "sample item 1",
+        "description": "sample item 1 description",
+        "unitCost": 1000,
+        "qtyHrRate": 1,
+        "amount": 1000
+      },
+      {
+        "id": 2,
+        "name": "sample item 2",
+        "description": "sample item 2 description",
+        "unitCost": 500,
+        "qtyHrRate": 1,
+        "amount": 500
+      },
+      {
+        "id": 3,
+        "name": "sample item 3",
+        "description": "sample item 3 description",
+        "unitCost": 1300,
+        "qtyHrRate": 1,
+        "amount": 1300
+      },
+      {
+        "id": 4,
+        "name": "sample item 4",
+        "description": "sample item 4 description",
+        "unitCost": 800,
+        "qtyHrRate": 1,
+        "amount": 800
+      },
+      {
+        "id": 5,
+        "name": "sample item 5",
+        "description": "sample item 5 description",
+        "unitCost": 340,
+        "qtyHrRate": 1,
+        "amount": 340
+      }
+    ],
+    "client": {
+      "id": 2,
+      "name": "Melinda Wilder",
+      "email": "melindawilder@unq.com",
+      "phone": "+1 (847) 530-3080",
+      "address": "171 Oriental Court, Echo, Arizona, 6428"
+    },
+    "total":4340,
+    "tax":400
+  },
+  {
+    "id":3,
+    "number":"000003",
+    "date":"03/05/2020",
+    "items":[
+      {
+        "id": 4,
+        "name": "sample item 4",
+        "description": "sample item 4 description",
+        "unitCost": 800,
+        "qtyHrRate": 1,
+        "amount": 800
+      },
+      {
+        "id": 5,
+        "name": "sample item 5",
+        "description": "sample item 5 description",
+        "unitCost": 340,
+        "qtyHrRate": 1,
+        "amount": 340
+      },
+      {
+        "id": 6,
+        "name": "sample item 6",
+        "description": "sample item 6 description",
+        "unitCost": 3049,
+        "qtyHrRate": 1,
+        "amount": 3049
+      },
+      {
+        "id": 7,
+        "name": "sample item 7",
+        "description": "sample item 7 description",
+        "unitCost": 2300,
+        "qtyHrRate": 1,
+        "amount": 2300
+      },
+      {
+        "id": 8,
+        "name": "sample item 8",
+        "description": "sample item 8 description",
+        "unitCost": 1000,
+        "qtyHrRate": 1,
+        "amount": 1000
+      }
+    ],
+    "client": {
+      "id": 2,
+      "name": "Melinda Wilder",
+      "email": "melindawilder@unq.com",
+      "phone": "+1 (847) 530-3080",
+      "address": "171 Oriental Court, Echo, Arizona, 6428"
+    },
+    "total":7989,
+    "tax":500
+  }
+]

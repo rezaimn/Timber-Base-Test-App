@@ -9,7 +9,6 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {path: '', redirectTo: 'wizard', pathMatch: 'prefix'},
-      {path: 'wizard', loadChildren: () => import('./wizard/wizard.module').then(m => m.WizardModule)},
     ]
   }
 ];

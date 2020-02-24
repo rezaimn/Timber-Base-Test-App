@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Lott Goff",
+    "email": "lottgoff@musix.com",
+    "phone": "+1 (924) 563-2971",
+    "address": "496 Thatford Avenue, Bergoo, Northern Mariana Islands, 7084"
+  },
+  {
+    "id": 2,
+    "name": "Melinda Wilder",
+    "email": "melindawilder@unq.com",
+    "phone": "+1 (847) 530-3080",
+    "address": "171 Oriental Court, Echo, Arizona, 6428"
+  },
+  {
+    "id": 3,
+    "name": "Fay Walters",
+    "email": "faywalters@ontality.com",
+    "phone": "+1 (897) 571-2610",
+    "address": "514 Virginia Place, Cecilia, Kentucky, 5969"
+  },
+  {
+    "id": 4,
+    "name": "Deleon Miller",
+    "email": "deleonmiller@geoform.com",
+    "phone": "+1 (863) 566-3253",
+    "address": "262 Albany Avenue, Rehrersburg, Vermont, 1435"
+  },
+  {
+    "id": 5,
+    "name": "Lopez Mendez",
+    "email": "lopezmendez@exoteric.com",
+    "phone": "+1 (852) 510-3520",
+    "address": "620 Durland Place, Elliston, California, 1682"
+  },
+  {
+    "id": 6,
+    "name": "Lauri Greene",
+    "email": "laurigreene@hawkster.com",
+    "phone": "+1 (990) 459-2258",
+    "address": "534 Stewart Street, Orason, Iowa, 4859"
+  },
+  {
+    "id": 7,
+    "name": "Kristin Cooper",
+    "email": "kristincooper@netility.com",
+    "phone": "+1 (865) 571-2577",
+    "address": "757 Greene Avenue, Gallina, Nevada, 2221"
+  },
+  {
+    "id": 8,
+    "name": "Humphrey Brewer",
+    "email": "humphreybrewer@combogen.com",
+    "phone": "+1 (968) 593-3523",
+    "address": "802 Merit Court, Lacomb, Kansas, 8614"
+  },
+  {
+    "id": 9,
+    "name": "Melendez Barrett",
+    "email": "melendezbarrett@emtrac.com",
+    "phone": "+1 (817) 466-2080",
+    "address": "381 Kingston Avenue, Bethpage, North Dakota, 5039"
+  },
+  {
+    "id": 10,
+    "name": "Hines Dawson",
+    "email": "hinesdawson@vitricomp.com",
+    "phone": "+1 (818) 468-3089",
+    "address": "999 Wilson Street, Zortman, Arkansas, 3945"
+  }
+]
